@@ -1,9 +1,10 @@
 import React from 'react';
-import './App.css';
 import { Router, Route } from "react-router-dom";
-import { createStore, applyMiddleware } from 'redux'
+import { createStore, applyMiddleware } from 'redux';
 import { Provider } from 'react-redux';
-import createSagaMiddleware from 'redux-saga'
+import createSagaMiddleware from 'redux-saga';
+
+import './App.css';
 import reducer from './reducers'
 import rootSaga from './sagas'
 import history from './services/history';

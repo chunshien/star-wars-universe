@@ -1,13 +1,10 @@
-import React from 'react';
+import React, {useCallback} from 'react';
 import './Button.css';
 
 function Button(props) {
-
-    const handleClick = () => {
-        if (props) {
-            props.onClick();
-        }
-    }
+    const handleClick = useCallback(() => {
+        props.onClick();
+    }, [props])
 
     return (
         <div className={'button'} onClick={handleClick}>

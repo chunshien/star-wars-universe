@@ -1,12 +1,5 @@
-.pagination {  
-    margin-top: 30px;
-    text-align: right;  
-    -khtml-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-    -webkit-touch-callout: none;
-    -webkit-user-select: none;                      
+.pagination {
+    text-align: center;
 }  
 .pagination span{
     padding: 5px 10px;

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useCallback} from 'react';
 import './ListItem.css';
 import avatar from '../../assets/avatar.png';
 
@@ -24,9 +24,9 @@ function ListItem(props) {
     }
   }
 
-  const handleClick = () => {
+  const handleClick = useCallback(() => {
     props.onClick(props.data.url);
-  }
+  }, [props])
 
   return (
     <div className={'container'} onClick={handleClick}>

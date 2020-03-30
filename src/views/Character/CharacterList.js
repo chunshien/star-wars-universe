@@ -1,11 +1,12 @@
-import React, { Fragment, useEffect } from 'react';
+import React, { Fragment, useEffect, useCallback } from 'react';
 import _ from 'lodash';
-import './CharacterList.css';
-import ListItem from '../../components/Character/ListItem';
-import Pagination from '../../components/Pagination/Pagination';
 import { connect } from 'react-redux';
 import { getPeople } from '../../actions';
 import { useHistory } from 'react-router-dom';
+
+import './CharacterList.css';
+import ListItem from '../../components/Character/ListItem';
+import Pagination from '../../components/Pagination/Pagination';
 
 function dataPropsAreEqual(prevProps, nextProps) {
     return (_.isEqual(prevProps.peoples, nextProps.peoples) 
@@ -14,17 +15,18 @@ function dataPropsAreEqual(prevProps, nextProps) {
 }
 
 const CharacterList = React.memo(function CharacterList({loading, peoples, getPeople, totalItem, activePage }) {
+    const history = useHistory();
+
     useEffect(() => {
         if (peoples.length === 0){
             getPeople();
         }
-    });
-
-    const history = useHistory();
-    const handleClick = (url) => {
+    }, [peoples, getPeople]);
+    
+    const handleClick = useCallback((url) => {
         const param = url.replace('https://swapi.co/api', '');
         history.push('/details' + param);
-    }
+    }, [history])
 
     const renderList = () => {
         if (peoples) {
@@ -36,9 +38,9 @@ const CharacterList = React.memo(function CharacterList({loading, peoples, getPe
         }
     }
 
-    const handlePageChanged = (index) => {
+    const handlePageChanged = useCallback((index) => {
         getPeople(index);
-    }
+    }, [getPeople])
 
     const renderPagination = () => {
         if (totalItem > 0) {

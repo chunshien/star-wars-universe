@@ -1,24 +1,20 @@
-import React, { Fragment, useEffect } from 'react';
+import React, { Fragment, useEffect, useCallback } from 'react';
 import _ from 'lodash';
-import './Details.css';
-import Button from '../../components/Button/Button';
 import { useParams } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { getDetails } from '../../actions';
 import { useHistory } from 'react-router-dom'
 
+import './Details.css';
+import Button from '../../components/Button/Button';
+
 function Details({loading, getDetails, details}) {
     const { type, id } = useParams();
     let history = useHistory()  
 
-    const fetchDetails = async () => {
-        await getDetails(type + '/' + id);        
-    }
     useEffect(() => {
-        fetchDetails();
-    },
-    // eslint-disable-next-line react-hooks/exhaustive-deps 
-    [details.url]);
+        getDetails(type + '/' + id);
+    }, [type, id, getDetails]);
     
     const renderField = () => {
         if (details) {
@@ -48,10 +44,8 @@ function Details({loading, getDetails, details}) {
         }
     }
 
-    const handleBack = () => {
-        history.goBack();
-    }
-
+    const handleBack = useCallback(() => {history.goBack()}, [history]);
+    
     return (
         <Fragment>
             {loading && 

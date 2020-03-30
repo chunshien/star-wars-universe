@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useCallback} from 'react';
 import './Pagination.css';
 
 function Pagination(props) {
@@ -14,20 +14,22 @@ function Pagination(props) {
                 (activePage > 1 ? activePage + 1 : activePage + 2) 
                 : lastPage;
     
-    const previousClick = () => {
+    const previousClick = useCallback(() => {
         if(activePage > 1){
             props.onChanged(activePage - 1)
         } 
-    }
-    const nextClick = () => {
+    }, [props, activePage]);
+
+    const nextClick = useCallback(() => {
         const lastPage = Math.ceil(totalItem / itemCountPerPage);
         if(activePage < lastPage){
             props.onChanged(activePage + 1)
         }   
-    }
-    const pageClick = (index) => {
+    }, [props, activePage, totalItem, itemCountPerPage]);
+
+    const pageClick = useCallback((index) => {
         props.onChanged(index)
-    }
+    }, [props])
     
     return (
         <div className="pagination">
