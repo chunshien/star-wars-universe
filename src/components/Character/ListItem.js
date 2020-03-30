@@ -24,8 +24,12 @@ function ListItem(props) {
     }
   }
 
+  const handleClick = () => {
+    props.onClick(props.data.url);
+  }
+
   return (
-    <div className={'container'}>
+    <div className={'container'} onClick={handleClick}>
         <div className={'item'}>
           <div className={'section'}>
             <img className={'avatar'} 

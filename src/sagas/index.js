@@ -1,15 +1,32 @@
 import { put, takeLatest, all } from 'redux-saga/effects';
 function* fetchPeople(action) {
-  const page = action.page;
-  const json = yield fetch('https://swapi.co/api/people/?page=' + page)
+  const page = action.page ? '/?page=' + action.page : '';
+  const response = yield fetch('https://swapi.co/api/people' + page)
         .then(response => response.json(), );    
-  yield put({ type: "PEOPLE_RECEIVED", json: json.results});
+  yield put({ 
+    type: "PEOPLE_RECEIVED", 
+    peoples: response.results,
+    total: response.count,
+    page: action.page ? action.page : 1
+  });
 }
+
+function* fetchDetails(action) {
+  const param = action.param;
+  const response = yield fetch('https://swapi.co/api/' + param)
+        .then(response => response.json(), );    
+  yield put({ 
+    type: "DETAILS_RECEIVED", 
+    details: response
+  });
+}
+
 function* actionWatcher() {
-     yield takeLatest('GET_PEOPLE', fetchPeople)
+    yield takeLatest('GET_PEOPLE', fetchPeople);
+    yield takeLatest('GET_DETAILS', fetchDetails);
 }
 export default function* rootSaga() {
-   yield all([
-   actionWatcher(),
-   ]);
+  yield all([
+    actionWatcher(),
+  ]);
 }
