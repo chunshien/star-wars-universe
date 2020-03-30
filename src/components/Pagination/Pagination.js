@@ -1,5 +1,29 @@
 import React, {useCallback} from 'react';
-import './Pagination.css';
+import styled from 'styled-components'
+
+const Container = styled.div`
+    text-align: center;
+`;
+
+const Page = styled.span`
+    padding: 5px 10px;
+    min-width: 20px;
+    cursor: pointer;
+`;
+
+const activePageStyle = {
+    backgroundColor: 'white',
+    borderBottom: '5px solid black'
+};
+
+const enabledPageNavigation = {
+    color: 'black'
+}
+
+const disabledPageNavigation = {
+    color: '#dddddd',
+    cursor: 'not-allowed'
+}
 
 function Pagination(props) {
     const {activePage, totalItem, itemCountPerPage} = props;
@@ -32,35 +56,35 @@ function Pagination(props) {
     }, [props])
     
     return (
-        <div className="pagination">
-            <span 
+        <Container>
+            <Page 
                 onClick={previousClick} 
-                className={activePage === 1 ? 'disabled-page-navigation' : 'enabled-page-navigation'}>
+                style={activePage === 1 ? disabledPageNavigation : enabledPageNavigation}>
                 {'< Previous page'}
-            </span>
-            <span 
+            </Page>
+            <Page 
                 onClick={()=>pageClick(firstIndex)} 
-                className={activePage === 1 ? 'active-page' : ''}>
+                style={activePage === 1 ? activePageStyle : {}}>
                 {firstIndex}
-            </span>
+            </Page>
             {Math.ceil(totalItem / itemCountPerPage) >= 2 &&
-                <span 
+                <Page 
                     onClick={()=>pageClick(secondIndex)} 
-                    className={activePage > 1 && activePage < lastPage ? 'active-page' : ''}>
+                    style={activePage > 1 && activePage < lastPage ? activePageStyle : {}}>
                     {secondIndex}
-                </span>
+                </Page>
             }
             {Math.ceil(totalItem / itemCountPerPage) >= 3 &&
-                <span 
+                <Page 
                     onClick={()=>pageClick(lastIndex)} 
-                    className={activePage === lastPage ? 'active-page' : ''}>
+                    style={activePage === lastPage ? activePageStyle : {}}>
                     {lastIndex}
-                </span>
+                </Page>
             }
-            <span onClick={nextClick} className={activePage !== lastPage ? 'enabled-page-navigation' : 'disabled-page-navigation'}>
+            <Page onClick={nextClick} style={activePage !== lastPage ? enabledPageNavigation : disabledPageNavigation}>
                 {'Next page >'}
-            </span>
-        </div>
+            </Page>
+        </Container>
     );
     
 }

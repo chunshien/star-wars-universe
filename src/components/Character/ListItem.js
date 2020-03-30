@@ -1,6 +1,38 @@
 import React, {useCallback} from 'react';
-import './ListItem.css';
+import styled from 'styled-components'
 import avatar from '../../assets/avatar.png';
+
+const Container = styled.div`
+  cursor: pointer;
+  width: 48%;
+  background-color: white;
+  float: left;
+  box-sizing: border-box;
+  padding: 20px;
+  margin: 1%;
+  border-radius: 5px;
+  box-shadow: 0px 2px 4px -1px rgba(0,0,0,0.2), 0px 4px 5px 0px rgba(0,0,0,0.14), 0px 1px 10px 0px rgba(0,0,0,0.12);
+`;
+
+const Item = styled.div`
+  display: table;
+`;
+
+const Section = styled.div`
+  display: table-cell;
+  vertical-align: top;
+  padding: 10px;
+`;
+
+const Avatar = styled.img`
+  width: 50px;
+  height: 50px;
+  padding: 10px;
+  border-radius: 40px;
+  border-color: black;
+  box-shadow: 0px 2px 4px -1px rgba(0,0,0,0.2), 0px 4px 5px 0px rgba(0,0,0,0.14), 0px 1px 10px 0px rgba(0,0,0,0.12);
+  object-fit: contain;
+`;
 
 function ListItem(props) {
   const getColor = (skinType) => {
@@ -29,21 +61,21 @@ function ListItem(props) {
   }, [props])
 
   return (
-    <div className={'container'} onClick={handleClick}>
-        <div className={'item'}>
-          <div className={'section'}>
-            <img className={'avatar'} 
+    <Container onClick={handleClick}>
+        <Item>
+          <Section>
+            <Avatar className={'avatar'} 
               style={{backgroundColor: getColor(props.data.skin_color)}} 
               src={avatar} alt={props.data.name} />
-          </div>
-          <div className={'section'}>
+          </Section>
+          <Section>
             <div>Name: {props.data.name}</div>
             <div>Height: {props.data.height}</div>
             <div>Gender: {props.data.gender}</div>
             <div>Mass: {props.data.mass}</div>
-          </div>
-        </div>        
-    </div>
+          </Section>
+        </Item>        
+    </Container>
   );
 }
 
