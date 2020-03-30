@@ -19,6 +19,7 @@ function App() {
     <Provider store={store}>
       <Router history={history}>
         <div>
+          <div className={'background'}></div>
           <Route exact path="/" component={CharacterList} />
           <Route path="/character-list" component={CharacterList} />
           <Route path="/details/:type?/:id?" component={Details} />

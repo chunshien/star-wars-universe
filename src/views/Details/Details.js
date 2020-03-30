@@ -30,7 +30,7 @@ function Details({loading, getDetails, details}) {
                             <div className={'details-label'}>{label} : </div>
                             <div className={'details-value'}>
                                 {details[item].length > 0 ? details[item].map((child) => (
-                                    <div>{child}</div>
+                                    <div key={child}>{child}</div>
                                 )) : '-'}
                             </div>
                         </div>

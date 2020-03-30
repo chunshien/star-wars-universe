@@ -1,6 +1,7 @@
 .container {
     cursor: pointer;
     width: 320px;
+    background-color: white;
     float: left;
     padding: 20px;
     margin: 10px;
