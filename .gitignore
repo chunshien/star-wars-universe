@@ -21,3 +21,9 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+# snaphot
+src/components/Character/__snapshots__/
+src/components/Pagination/__snapshots__/
+src/views/Character/__snapshots__/
+src/views/CharacterDetails/__snapshots__/
