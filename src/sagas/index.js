@@ -1,6 +1,6 @@
 import { put, takeLatest, all } from 'redux-saga/effects';
-function* fetchPeople(action) {
-  const page = action.page ? '/?page=' + action.page : '';
+export function* fetchPeople(action) {
+  const page = action && action.page ? '/?page=' + action.page : '';
   const response = yield fetch('https://swapi.co/api/people' + page)
         .then(response => response.json(), );    
   yield put({ 
@@ -11,7 +11,7 @@ function* fetchPeople(action) {
   });
 }
 
-function* fetchDetails(action) {
+export function* fetchDetails(action) {
   const param = action.param;
   const response = yield fetch('https://swapi.co/api/' + param)
         .then(response => response.json(), );    
@@ -21,7 +21,7 @@ function* fetchDetails(action) {
   });
 }
 
-function* actionWatcher() {
+export function* actionWatcher() {
     yield takeLatest('GET_PEOPLE', fetchPeople);
     yield takeLatest('GET_DETAILS', fetchDetails);
 }
