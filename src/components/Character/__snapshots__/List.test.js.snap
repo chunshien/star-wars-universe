@@ -1,0 +1,516 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Component - List Test renders List with data without crashing 1`] = `
+Array [
+  <div
+    className="sc-AxheI fmZbrR"
+  >
+    <div
+      className="sc-AxjAm iFUVjd"
+      onClick={[Function]}
+    >
+      <div
+        className="sc-AxirZ ehqiCf"
+      >
+        <div
+          className="sc-AxiKw iPnqiR"
+        >
+          <img
+            alt="Luke Skywalker"
+            className="sc-AxhCb jvfHjD avatar"
+            src="avatar.png"
+            style={
+              Object {
+                "backgroundColor": "#ffe0bd",
+              }
+            }
+          />
+        </div>
+        <div
+          className="sc-AxiKw iPnqiR"
+        >
+          <div>
+            Name: 
+            Luke Skywalker
+          </div>
+          <div>
+            Height: 
+            172
+          </div>
+          <div>
+            Gender: 
+            male
+          </div>
+          <div>
+            Mass: 
+            77
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      className="sc-AxjAm iFUVjd"
+      onClick={[Function]}
+    >
+      <div
+        className="sc-AxirZ ehqiCf"
+      >
+        <div
+          className="sc-AxiKw iPnqiR"
+        >
+          <img
+            alt="C-3PO"
+            className="sc-AxhCb jvfHjD avatar"
+            src="avatar.png"
+            style={
+              Object {
+                "backgroundColor": "gold",
+              }
+            }
+          />
+        </div>
+        <div
+          className="sc-AxiKw iPnqiR"
+        >
+          <div>
+            Name: 
+            C-3PO
+          </div>
+          <div>
+            Height: 
+            167
+          </div>
+          <div>
+            Gender: 
+            n/a
+          </div>
+          <div>
+            Mass: 
+            75
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      className="sc-AxjAm iFUVjd"
+      onClick={[Function]}
+    >
+      <div
+        className="sc-AxirZ ehqiCf"
+      >
+        <div
+          className="sc-AxiKw iPnqiR"
+        >
+          <img
+            alt="R2-D2"
+            className="sc-AxhCb jvfHjD avatar"
+            src="avatar.png"
+            style={
+              Object {
+                "backgroundColor": "white, blue",
+              }
+            }
+          />
+        </div>
+        <div
+          className="sc-AxiKw iPnqiR"
+        >
+          <div>
+            Name: 
+            R2-D2
+          </div>
+          <div>
+            Height: 
+            96
+          </div>
+          <div>
+            Gender: 
+            n/a
+          </div>
+          <div>
+            Mass: 
+            32
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      className="sc-AxjAm iFUVjd"
+      onClick={[Function]}
+    >
+      <div
+        className="sc-AxirZ ehqiCf"
+      >
+        <div
+          className="sc-AxiKw iPnqiR"
+        >
+          <img
+            alt="Darth Vader"
+            className="sc-AxhCb jvfHjD avatar"
+            src="avatar.png"
+            style={
+              Object {
+                "backgroundColor": "white",
+              }
+            }
+          />
+        </div>
+        <div
+          className="sc-AxiKw iPnqiR"
+        >
+          <div>
+            Name: 
+            Darth Vader
+          </div>
+          <div>
+            Height: 
+            202
+          </div>
+          <div>
+            Gender: 
+            male
+          </div>
+          <div>
+            Mass: 
+            136
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      className="sc-AxjAm iFUVjd"
+      onClick={[Function]}
+    >
+      <div
+        className="sc-AxirZ ehqiCf"
+      >
+        <div
+          className="sc-AxiKw iPnqiR"
+        >
+          <img
+            alt="Leia Organa"
+            className="sc-AxhCb jvfHjD avatar"
+            src="avatar.png"
+            style={
+              Object {
+                "backgroundColor": "#ffd6a4",
+              }
+            }
+          />
+        </div>
+        <div
+          className="sc-AxiKw iPnqiR"
+        >
+          <div>
+            Name: 
+            Leia Organa
+          </div>
+          <div>
+            Height: 
+            150
+          </div>
+          <div>
+            Gender: 
+            female
+          </div>
+          <div>
+            Mass: 
+            49
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      className="sc-AxjAm iFUVjd"
+      onClick={[Function]}
+    >
+      <div
+        className="sc-AxirZ ehqiCf"
+      >
+        <div
+          className="sc-AxiKw iPnqiR"
+        >
+          <img
+            alt="Owen Lars"
+            className="sc-AxhCb jvfHjD avatar"
+            src="avatar.png"
+            style={
+              Object {
+                "backgroundColor": "#ffd6a4",
+              }
+            }
+          />
+        </div>
+        <div
+          className="sc-AxiKw iPnqiR"
+        >
+          <div>
+            Name: 
+            Owen Lars
+          </div>
+          <div>
+            Height: 
+            178
+          </div>
+          <div>
+            Gender: 
+            male
+          </div>
+          <div>
+            Mass: 
+            120
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      className="sc-AxjAm iFUVjd"
+      onClick={[Function]}
+    >
+      <div
+        className="sc-AxirZ ehqiCf"
+      >
+        <div
+          className="sc-AxiKw iPnqiR"
+        >
+          <img
+            alt="Beru Whitesun lars"
+            className="sc-AxhCb jvfHjD avatar"
+            src="avatar.png"
+            style={
+              Object {
+                "backgroundColor": "#ffd6a4",
+              }
+            }
+          />
+        </div>
+        <div
+          className="sc-AxiKw iPnqiR"
+        >
+          <div>
+            Name: 
+            Beru Whitesun lars
+          </div>
+          <div>
+            Height: 
+            165
+          </div>
+          <div>
+            Gender: 
+            female
+          </div>
+          <div>
+            Mass: 
+            75
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      className="sc-AxjAm iFUVjd"
+      onClick={[Function]}
+    >
+      <div
+        className="sc-AxirZ ehqiCf"
+      >
+        <div
+          className="sc-AxiKw iPnqiR"
+        >
+          <img
+            alt="R5-D4"
+            className="sc-AxhCb jvfHjD avatar"
+            src="avatar.png"
+            style={
+              Object {
+                "backgroundColor": "white, red",
+              }
+            }
+          />
+        </div>
+        <div
+          className="sc-AxiKw iPnqiR"
+        >
+          <div>
+            Name: 
+            R5-D4
+          </div>
+          <div>
+            Height: 
+            97
+          </div>
+          <div>
+            Gender: 
+            n/a
+          </div>
+          <div>
+            Mass: 
+            32
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      className="sc-AxjAm iFUVjd"
+      onClick={[Function]}
+    >
+      <div
+        className="sc-AxirZ ehqiCf"
+      >
+        <div
+          className="sc-AxiKw iPnqiR"
+        >
+          <img
+            alt="Biggs Darklighter"
+            className="sc-AxhCb jvfHjD avatar"
+            src="avatar.png"
+            style={
+              Object {
+                "backgroundColor": "#ffd6a4",
+              }
+            }
+          />
+        </div>
+        <div
+          className="sc-AxiKw iPnqiR"
+        >
+          <div>
+            Name: 
+            Biggs Darklighter
+          </div>
+          <div>
+            Height: 
+            183
+          </div>
+          <div>
+            Gender: 
+            male
+          </div>
+          <div>
+            Mass: 
+            84
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      className="sc-AxjAm iFUVjd"
+      onClick={[Function]}
+    >
+      <div
+        className="sc-AxirZ ehqiCf"
+      >
+        <div
+          className="sc-AxiKw iPnqiR"
+        >
+          <img
+            alt="Obi-Wan Kenobi"
+            className="sc-AxhCb jvfHjD avatar"
+            src="avatar.png"
+            style={
+              Object {
+                "backgroundColor": "#ffe0bd",
+              }
+            }
+          />
+        </div>
+        <div
+          className="sc-AxiKw iPnqiR"
+        >
+          <div>
+            Name: 
+            Obi-Wan Kenobi
+          </div>
+          <div>
+            Height: 
+            182
+          </div>
+          <div>
+            Gender: 
+            male
+          </div>
+          <div>
+            Mass: 
+            77
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>,
+  <div
+    className="sc-AxheI fmZbrR"
+  >
+    <div
+      className="sc-AxhUy fIZDaY"
+    >
+      <span
+        className="sc-AxgMl djxOiP"
+        onClick={[Function]}
+        style={
+          Object {
+            "color": "#dddddd",
+            "cursor": "not-allowed",
+          }
+        }
+      >
+        &lt; Previous page
+      </span>
+      <span
+        className="sc-AxgMl djxOiP"
+        onClick={[Function]}
+        style={
+          Object {
+            "backgroundColor": "white",
+            "borderBottom": "5px solid black",
+          }
+        }
+      >
+        1
+      </span>
+      <span
+        className="sc-AxgMl djxOiP"
+        onClick={[Function]}
+        style={Object {}}
+      >
+        2
+      </span>
+      <span
+        className="sc-AxgMl djxOiP"
+        onClick={[Function]}
+        style={Object {}}
+      >
+        3
+      </span>
+      <span
+        className="sc-AxgMl djxOiP"
+        onClick={[Function]}
+        style={
+          Object {
+            "color": "black",
+          }
+        }
+      >
+        Next page &gt;
+      </span>
+    </div>
+  </div>,
+]
+`;
+
+exports[`Component - List Test renders List without data without crashing 1`] = `
+Array [
+  <div
+    className="sc-AxheI fmZbrR"
+  >
+    <div>
+      <div
+        className="sc-Axmtr hRgGIe"
+      >
+        No data available
+      </div>
+    </div>
+  </div>,
+  <div
+    className="sc-AxheI fmZbrR"
+  />,
+]
+`;

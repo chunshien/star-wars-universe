@@ -9,8 +9,8 @@ import backgroundImage from './assets/starwars.jpg';
 import reducer from './reducers'
 import rootSaga from './sagas'
 import history from './services/history';
-import CharacterList from './views/Character/CharacterList';
-import Details from './views/Details/Details';
+import Character from './views/Character/Character';
+import CharacterDetails from './views/CharacterDetails/CharacterDetails';
 
 const sagaMiddleware = createSagaMiddleware();
 const store = createStore(reducer, applyMiddleware(sagaMiddleware));
@@ -31,9 +31,9 @@ function App() {
       <Router history={history}>
         <div>
           <Background />
-          <Route exact path="/" component={CharacterList} />
-          <Route path="/character-list" component={CharacterList} />
-          <Route path="/details/:type?/:id?" component={Details} />
+          <Route exact path="/" component={Character} />
+          <Route path="/character-list" component={Character} />
+          <Route path="/details/:type?/:id?" component={CharacterDetails} />
         </div>
       </Router>
     </Provider>

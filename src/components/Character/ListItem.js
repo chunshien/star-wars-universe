@@ -60,23 +60,28 @@ function ListItem(props) {
     props.onClick(props.data.url);
   }, [props])
 
-  return (
-    <Container onClick={handleClick}>
-        <Item>
-          <Section>
-            <Avatar className={'avatar'} 
-              style={{backgroundColor: getColor(props.data.skin_color)}} 
-              src={avatar} alt={props.data.name} />
-          </Section>
-          <Section>
-            <div>Name: {props.data.name}</div>
-            <div>Height: {props.data.height}</div>
-            <div>Gender: {props.data.gender}</div>
-            <div>Mass: {props.data.mass}</div>
-          </Section>
-        </Item>        
-    </Container>
-  );
+  if(props.data){
+    return (
+      <Container onClick={handleClick}>
+          <Item>
+            <Section>
+              <Avatar className={'avatar'} 
+                style={{backgroundColor: getColor(props.data.skin_color)}} 
+                src={avatar} alt={props.data.name} />
+            </Section>
+            <Section>
+              <div>Name: {props.data.name}</div>
+              <div>Height: {props.data.height}</div>
+              <div>Gender: {props.data.gender}</div>
+              <div>Mass: {props.data.mass}</div>
+            </Section>
+          </Item>        
+      </Container>
+    );
+  }
+  else {
+    return <div></div>
+  }
 }
 
 export default ListItem;

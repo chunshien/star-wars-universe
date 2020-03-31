@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`View - Character Test renders Character without crashing 1`] = `
+Array [
+  <div
+    className="sc-fzoLsD bUtyeZ"
+  >
+    Star Wars Characters
+  </div>,
+  <div
+    className="sc-AxheI fmZbrR"
+  >
+    <div>
+      <div
+        className="sc-Axmtr hRgGIe"
+      >
+        No data available
+      </div>
+    </div>
+  </div>,
+  <div
+    className="sc-AxheI fmZbrR"
+  />,
+]
+`;

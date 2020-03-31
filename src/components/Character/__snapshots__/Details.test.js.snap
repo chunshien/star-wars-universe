@@ -1,0 +1,280 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Component - Details Test renders Details with data without crashing 1`] = `
+<div
+  className="sc-AxjAm jfFdTm"
+>
+  <div
+    className="sc-AxirZ hrootq"
+  >
+    <div
+      className="sc-AxiKw cscMYO"
+    >
+      Name
+       : 
+    </div>
+    <div
+      className="sc-AxhCb gsDaNY"
+    >
+      Luke Skywalker
+    </div>
+  </div>
+  <div
+    className="sc-AxirZ hrootq"
+  >
+    <div
+      className="sc-AxiKw cscMYO"
+    >
+      Height
+       : 
+    </div>
+    <div
+      className="sc-AxhCb gsDaNY"
+    >
+      172
+    </div>
+  </div>
+  <div
+    className="sc-AxirZ hrootq"
+  >
+    <div
+      className="sc-AxiKw cscMYO"
+    >
+      Mass
+       : 
+    </div>
+    <div
+      className="sc-AxhCb gsDaNY"
+    >
+      77
+    </div>
+  </div>
+  <div
+    className="sc-AxirZ hrootq"
+  >
+    <div
+      className="sc-AxiKw cscMYO"
+    >
+      Hair Color
+       : 
+    </div>
+    <div
+      className="sc-AxhCb gsDaNY"
+    >
+      blond
+    </div>
+  </div>
+  <div
+    className="sc-AxirZ hrootq"
+  >
+    <div
+      className="sc-AxiKw cscMYO"
+    >
+      Skin Color
+       : 
+    </div>
+    <div
+      className="sc-AxhCb gsDaNY"
+    >
+      fair
+    </div>
+  </div>
+  <div
+    className="sc-AxirZ hrootq"
+  >
+    <div
+      className="sc-AxiKw cscMYO"
+    >
+      Eye Color
+       : 
+    </div>
+    <div
+      className="sc-AxhCb gsDaNY"
+    >
+      blue
+    </div>
+  </div>
+  <div
+    className="sc-AxirZ hrootq"
+  >
+    <div
+      className="sc-AxiKw cscMYO"
+    >
+      Birth Year
+       : 
+    </div>
+    <div
+      className="sc-AxhCb gsDaNY"
+    >
+      19BBY
+    </div>
+  </div>
+  <div
+    className="sc-AxirZ hrootq"
+  >
+    <div
+      className="sc-AxiKw cscMYO"
+    >
+      Gender
+       : 
+    </div>
+    <div
+      className="sc-AxhCb gsDaNY"
+    >
+      male
+    </div>
+  </div>
+  <div
+    className="sc-AxirZ hrootq"
+  >
+    <div
+      className="sc-AxiKw cscMYO"
+    >
+      Homeworld
+       : 
+    </div>
+    <div
+      className="sc-AxhCb gsDaNY"
+    >
+      https://swapi.co/api/planets/1/
+    </div>
+  </div>
+  <div
+    className="sc-AxirZ hrootq"
+  >
+    <div
+      className="sc-AxiKw cscMYO"
+    >
+      Films
+       : 
+    </div>
+    <div
+      className="sc-AxhCb gsDaNY"
+    >
+      <div>
+        https://swapi.co/api/films/2/
+      </div>
+      <div>
+        https://swapi.co/api/films/6/
+      </div>
+      <div>
+        https://swapi.co/api/films/3/
+      </div>
+      <div>
+        https://swapi.co/api/films/1/
+      </div>
+      <div>
+        https://swapi.co/api/films/7/
+      </div>
+    </div>
+  </div>
+  <div
+    className="sc-AxirZ hrootq"
+  >
+    <div
+      className="sc-AxiKw cscMYO"
+    >
+      Species
+       : 
+    </div>
+    <div
+      className="sc-AxhCb gsDaNY"
+    >
+      <div>
+        https://swapi.co/api/species/1/
+      </div>
+    </div>
+  </div>
+  <div
+    className="sc-AxirZ hrootq"
+  >
+    <div
+      className="sc-AxiKw cscMYO"
+    >
+      Vehicles
+       : 
+    </div>
+    <div
+      className="sc-AxhCb gsDaNY"
+    >
+      <div>
+        https://swapi.co/api/vehicles/14/
+      </div>
+      <div>
+        https://swapi.co/api/vehicles/30/
+      </div>
+    </div>
+  </div>
+  <div
+    className="sc-AxirZ hrootq"
+  >
+    <div
+      className="sc-AxiKw cscMYO"
+    >
+      Starships
+       : 
+    </div>
+    <div
+      className="sc-AxhCb gsDaNY"
+    >
+      <div>
+        https://swapi.co/api/starships/12/
+      </div>
+      <div>
+        https://swapi.co/api/starships/22/
+      </div>
+    </div>
+  </div>
+  <div
+    className="sc-AxirZ hrootq"
+  >
+    <div
+      className="sc-AxiKw cscMYO"
+    >
+      Created
+       : 
+    </div>
+    <div
+      className="sc-AxhCb gsDaNY"
+    >
+      2014-12-09T13:50:51.644000Z
+    </div>
+  </div>
+  <div
+    className="sc-AxirZ hrootq"
+  >
+    <div
+      className="sc-AxiKw cscMYO"
+    >
+      Edited
+       : 
+    </div>
+    <div
+      className="sc-AxhCb gsDaNY"
+    >
+      2014-12-20T21:17:56.891000Z
+    </div>
+  </div>
+  <div
+    className="sc-AxirZ hrootq"
+  >
+    <div
+      className="sc-AxiKw cscMYO"
+    >
+      Url
+       : 
+    </div>
+    <div
+      className="sc-AxhCb gsDaNY"
+    >
+      https://swapi.co/api/people/1/
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Component - Details Test renders Details without data without crashing 1`] = `
+<div
+  className="sc-AxjAm jfFdTm"
+/>
+`;
