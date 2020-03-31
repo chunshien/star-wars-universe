@@ -1,4 +1,5 @@
 import React, { Fragment } from 'react';
+import PropTypes from 'prop-types';
 import _ from 'lodash';
 import styled from 'styled-components'
 
@@ -68,5 +69,7 @@ function Details(props) {
         </Fragment>
     )
 }
-
+Details.propTypes = {
+    details: PropTypes.object
+};
 export default Details;

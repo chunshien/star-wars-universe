@@ -1,4 +1,5 @@
 import React, {useCallback} from 'react';
+import PropTypes from 'prop-types';
 import styled from 'styled-components'
 
 const ButtonContainer = styled.div`
@@ -23,5 +24,7 @@ function Button(props) {
         </ButtonContainer>
     )
 }
-
+Button.propTypes = {
+    onClick: PropTypes.func
+};
 export default Button;

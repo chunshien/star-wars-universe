@@ -1,4 +1,5 @@
 import React, { Fragment, useEffect, useCallback } from 'react';
+import PropTypes from 'prop-types';
 import _ from 'lodash';
 import styled from 'styled-components'
 import { connect } from 'react-redux';
@@ -58,6 +59,14 @@ const Character = React.memo(function Character({loading, peoples, getPeople, to
         </Fragment>
     );
 }, dataPropsAreEqual);
+
+Character.propTypes = {
+    loading: PropTypes.bool,
+    totalItem: PropTypes.number,
+    activePage: PropTypes.number,
+    peoples: PropTypes.array,
+    getPeople: PropTypes.func
+};
 
 const mapDispatchToProps = {
     getPeople: getPeople,

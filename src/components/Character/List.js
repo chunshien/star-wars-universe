@@ -1,4 +1,5 @@
 import React, { Fragment, useCallback } from 'react';
+import PropTypes from 'prop-types';
 import styled from 'styled-components'
 
 import ListItem from './ListItem';
@@ -77,5 +78,11 @@ function List(props) {
         </Fragment>
     )
 }
-
+List.propTypes = {
+    peoples: PropTypes.array,
+    totalItem: PropTypes.number,
+    activePage: PropTypes.number,
+    itemCountPerPage: PropTypes.number,
+    onChanged: PropTypes.func
+};
 export default List;

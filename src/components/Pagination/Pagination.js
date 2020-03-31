@@ -1,4 +1,5 @@
 import React, {useCallback} from 'react';
+import PropTypes from 'prop-types';
 import styled from 'styled-components'
 
 const Container = styled.div`
@@ -86,8 +87,13 @@ function Pagination(props) {
             </Page>
         </Container>
     );
-    
 }
+Pagination.propTypes = {
+    activePage: PropTypes.number,
+    totalItem: PropTypes.number,
+    itemCountPerPage: PropTypes.number,
+    onChanged: PropTypes.func
+};
 Pagination.defaultProps = {
     activePage: 1,
     totalItem: 0,

@@ -1,4 +1,5 @@
 import React, { Fragment, useEffect, useCallback } from 'react';
+import PropTypes from 'prop-types';
 import styled from 'styled-components'
 import { useParams } from 'react-router-dom';
 import { connect } from 'react-redux';
@@ -48,6 +49,12 @@ function CharacterDetails({loading, getDetails, details}) {
         </Fragment>
     )
 }
+
+CharacterDetails.propTypes = {
+    loading: PropTypes.bool,
+    details: PropTypes.object,
+    getDetails: PropTypes.func
+};
 
 const mapDispatchToProps = {
     getDetails: getDetails,

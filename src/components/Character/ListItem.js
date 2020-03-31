@@ -1,4 +1,5 @@
 import React, {useCallback, useState, useEffect} from 'react';
+import PropTypes from 'prop-types';
 import styled from 'styled-components'
 import avatar from '../../assets/avatar.png';
 
@@ -114,5 +115,7 @@ function ListItem(props) {
     return <div></div>
   }
 }
-
+ListItem.propTypes = {
+  data: PropTypes.object
+};
 export default ListItem;
