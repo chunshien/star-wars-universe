@@ -1,4 +1,4 @@
-import React, {useCallback} from 'react';
+import React, {useCallback, useState, useEffect} from 'react';
 import styled from 'styled-components'
 import avatar from '../../assets/avatar.png';
 
@@ -12,6 +12,9 @@ const Container = styled.div`
   margin: 1%;
   border-radius: 5px;
   box-shadow: 0px 2px 4px -1px rgba(0,0,0,0.2), 0px 4px 5px 0px rgba(0,0,0,0.14), 0px 1px 10px 0px rgba(0,0,0,0.12);
+  @media (max-width: 600px) {
+    width: 98%;
+  }
 `;
 
 const Item = styled.div`
@@ -34,7 +37,25 @@ const Avatar = styled.img`
   object-fit: contain;
 `;
 
+function getWindowDimensions() {
+  const { innerWidth: width, innerHeight: height } = window;
+  return {
+    width,
+    height
+  };
+}
+
 function ListItem(props) {
+  const [windowDimensions, setWindowDimensions] = useState(getWindowDimensions());
+  useEffect(() => {
+    function handleResize() {
+      setWindowDimensions(getWindowDimensions());
+    }
+
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, [windowDimensions]);
+
   const getColor = (skinType) => {
     if (skinType.indexOf('fair') >= 0) {
       return '#ffe0bd';
@@ -60,6 +81,16 @@ function ListItem(props) {
     props.onClick(props.data.url);
   }, [props])
 
+  let TextOverflowStyle = {
+    textOverflow: 'ellipsis',
+    overflow: 'hidden',     
+    whiteSpace: 'nowrap'
+  }
+
+  if(windowDimensions.width > 600) {
+    TextOverflowStyle.maxWidth = windowDimensions.width * 0.25
+  }
+
   if(props.data){
     return (
       <Container onClick={handleClick}>
@@ -70,10 +101,10 @@ function ListItem(props) {
                 src={avatar} alt={props.data.name} />
             </Section>
             <Section>
-              <div>Name: {props.data.name}</div>
-              <div>Height: {props.data.height}</div>
-              <div>Gender: {props.data.gender}</div>
-              <div>Mass: {props.data.mass}</div>
+              <div style={TextOverflowStyle}>Name: {props.data.name}</div>
+              <div style={TextOverflowStyle}>Height: {props.data.height}</div>
+              <div style={TextOverflowStyle}>Gender: {props.data.gender}</div>
+              <div style={TextOverflowStyle}>Mass: {props.data.mass}</div>
             </Section>
           </Item>        
       </Container>
